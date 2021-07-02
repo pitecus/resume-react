@@ -47,7 +47,7 @@ const Experience = (props: {
       {/* Highlights */}
       {
         props.work.highlights.map((highlight: string) =>
-          <p className="mb-2 text-sm print:text-xs">
+          <p className="mb-2 text-sm print:text-xs" key={highlight}>
             {highlight}
           </p>)
       }

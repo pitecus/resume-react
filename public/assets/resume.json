@@ -2,7 +2,7 @@
   "awards": [],
   "basics": {
     "email": "pitecus@gmail.com",
-    "label": "Angular + DevOps",
+    "label": "Frontend + DevOps",
     "location": {
       "address": "",
       "city": "Wayne",
@@ -13,6 +13,7 @@
     "name": "Leonardo Meirelles",
     "phone": "(770) 298-3632",
     "picture": "leo-meirelles.jpeg",
+    "pronoun": "he/him",
     "profiles": [
       {
         "network": "Twitter",
@@ -63,7 +64,8 @@
   "skills": [
     {
       "keywords": [
-        "UI/UX",
+        "User Interface",
+        "User Experience",
         "Angular",
         "TypeScript",
         "Javascript",
@@ -72,7 +74,8 @@
         "HTML",
         "XML",
         "Google Analytics",
-        "NestJS"
+        "ReactJS",
+        "Lambda functions"
       ],
       "level": "Master",
       "name": "Frontend/Backend"
@@ -90,7 +93,9 @@
         "AWS Cloudformation, Lambda, API Gateway",
         "Jenkinsfile",
         "Splunk",
-        "Instana"
+        "Instana",
+        "AWS API Gateway",
+        "AWS Load balancer"
       ],
       "level": "Master",
       "name": "DevOps"

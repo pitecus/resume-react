@@ -6,7 +6,7 @@ const Profile = (props: {
   return <a
     rel="noopener noreferrer"
     target="_blank"
-    href="{{profile.url}}">
+    href={props.profile.url}>
     {/* Twitter */}
     {
       props.profile.network === 'Twitter' &&

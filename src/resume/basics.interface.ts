@@ -12,6 +12,7 @@ interface IBasics {
   phone: string;
   picture: string;
   profiles?: IProfile[] | null;
+  pronoun: string;
   summary: string;
   website: string;
 }

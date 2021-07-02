@@ -44,7 +44,7 @@ class Resume extends React.Component<
     fetch("/assets/resume.json")
       // Extract only the json portion of the request.
       .then(res => res.json())
-      // PRocess the result.
+      // Process the result.
       .then(
         (result: IResume) => {
           this.setState({
@@ -64,7 +64,7 @@ class Resume extends React.Component<
     fetch("/assets/release.json")
       // Extract only the json portion of the request.
       .then(res => res.json())
-      // PRocess the result.
+      // Process the result.
       .then(
         (result: IRelease) => {
           this.setState({
@@ -104,12 +104,20 @@ class Resume extends React.Component<
                 src="assets/leo-meirelles.jpeg" />
               <div className="sm:pb-0 pb-4 print:pb-0">
                 {/* Name */}
-                <h1 className="font-semibold text-2xl text-indigo-900 ">{resume.basics.name}</h1>
-                {/* Label */}
-                <p>{resume.basics.label}</p>
+                <h1 className="font-semibold text-2xl text-indigo-900">{resume.basics.name}</h1>
+                {/* Label and pronoun */}
+                <div className="flex justify-between">
+                  {/* Label */}
+                  <p>{resume.basics.label}</p>
+                  {/* Pronoun */}
+                  <p className="text-gray-500">{resume.basics.pronoun}</p>
+                </div>
                 {/* Location */}
-                <p className="text-gray-500 text-sm mb-2">{resume.basics.location?.city},
+                <p className="text-gray-500 text-sm mb-2">
+                  {resume.basics.location?.city},
+                  &nbsp;
                   {resume.basics.location?.region},
+                  &nbsp;
                   {resume.basics.location?.countryCode}
                 </p>
                 {/* Phone contact */}
@@ -123,7 +131,7 @@ class Resume extends React.Component<
                   </svg>
                   <a className="pl-2"
                     rel="noopener noreferrer"
-                    href="tel:{resume.basics.phone}">
+                    href={`tel:${resume.basics.phone}`}>
                     {resume.basics.phone}
                   </a>
                 </p>
@@ -138,7 +146,7 @@ class Resume extends React.Component<
                   </svg>
                   <a className="pl-2"
                     rel="noopener noreferrer"
-                    href="mailto:{resume.basics.email}">
+                    href={`mailto:${resume.basics.email}`}>
                     {resume.basics.email}
                   </a>
                 </p>
@@ -156,7 +164,7 @@ class Resume extends React.Component<
                   </svg>
                   <a className="pl-2"
                     rel="noopener noreferrer"
-                    href="{resume.basics.website}">
+                    href={resume.basics.website}>
                     {resume.basics.website}
                   </a>
                 </p>
@@ -205,7 +213,7 @@ class Resume extends React.Component<
                 </h2>
                 {
                   resume.work.map((work) =>
-                    <Experience work={work} />)
+                    <Experience work={work} key={work.startDate} />)
                 }
               </div>
             }
@@ -218,7 +226,7 @@ class Resume extends React.Component<
                 </h2>
                 {
                   resume.publications.map((publication: IPublication) =>
-                    <Publication publication={publication}></Publication>
+                    <Publication publication={publication} key={publication.publisher}></Publication>
                   )
                 }
               </div>
@@ -236,7 +244,7 @@ class Resume extends React.Component<
                     </h2>
                     {
                       resume.education.map(education =>
-                        <Education education={education}></Education>
+                        <Education education={education} key={education.area}></Education>
                       )
                     }
                   </div>
@@ -251,7 +259,7 @@ class Resume extends React.Component<
                     <div className="mt-2 flex flex-row flex-wrap">
                       {
                         resume.languages.map(language =>
-                          <Language language={language}></Language>
+                          <Language language={language} key={language.language}></Language>
                         )
                       }
                     </div>
@@ -269,7 +277,7 @@ class Resume extends React.Component<
                 <dl>
                   {
                     resume.skills.map(skill =>
-                      <Skill skill={skill}></Skill>
+                      <Skill skill={skill} key={skill.name}></Skill>
                     )
                   }
                 </dl>
