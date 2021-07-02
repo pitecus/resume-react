@@ -1,5 +1,12 @@
 import './App.css';
 
+import {
+  Redirect,
+  Route,
+  HashRouter as Router,
+  Switch
+} from "react-router-dom";
+
 import INavigationItem from './navigation-item.interface';
 import NavigationItem from './NavigationItem';
 
@@ -23,13 +30,13 @@ function App() {
    * @param e the event
    */
   const toggleMenu = (e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    console.log('You clicked submit.', e);
+    console.log('You clicked toggleMenu.', e);
+    // TODO: toogle the navigation menu.
   };
 
   // Return the function.
   return (
-    <div className="App">
+    <Router>
       {/* Menu button */}
       <button className=" focus:outline-none z-20 absolute top-3 left-3 border rounded-lg shadow-md bg-white print:hidden"
         aria-label="toogle navigation menu"
@@ -46,18 +53,32 @@ function App() {
         </svg>
       </button>
       {/* Menu navigation */}
-      <nav
-        className="z-10 absolute top-12 bg-white w-44 rounded-r-lg shadow-md text-sm text-indigo-600 font-bold capitalize print:hidden"
-        role="navigation">
-        <div className="flex flex-col justify-center">
-          {
-            navigationItems.map((navigationItem: INavigationItem) =>
-              <NavigationItem item={navigationItem} toggleMenu={toggleMenu} key={navigationItem.label} />
-            )
-          }
-        </div>
-      </nav>
-    </div>
+      <div>
+        <nav
+          className="z-10 absolute top-12 bg-white w-44 rounded-r-lg shadow-md text-sm text-indigo-600 font-bold capitalize print:hidden"
+          role="navigation">
+          <div className="flex flex-col justify-center">
+            {
+              navigationItems.map((navigationItem: INavigationItem) =>
+                <NavigationItem item={navigationItem} toggleMenu={toggleMenu} key={navigationItem.label} />
+              )
+            }
+          </div>
+        </nav>
+      </div>
+      {/* Navigation */}
+      <Switch>
+        <Route path="/resume">
+          <p>Resume!</p>
+        </Route>
+        <Route path="/changelog">
+          <p>Changelog!</p>
+        </Route>
+        <Route path="*">
+          <Redirect to="/resume" />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

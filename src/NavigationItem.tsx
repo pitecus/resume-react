@@ -1,4 +1,7 @@
 import INavigationItem from "./navigation-item.interface";
+import {
+  Link
+} from "react-router-dom";
 
 /**
  * Navigation item.
@@ -7,9 +10,9 @@ const NavigationItem = (props: {
   item: INavigationItem,
   toggleMenu: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }) => {
-  return (<a
+  return (<Link
     onClick={props.toggleMenu}
-    href={props.item.link}
+    to={props.item.link}
     className="h-12 py-3 px-3 border">
     {/* Resume */}
     {
@@ -40,7 +43,7 @@ const NavigationItem = (props: {
       </svg>
     }
     <span className="ml-2 inline align-middle">{props.item.label}</span>
-  </a>);
+  </Link>);
 };
 
 /**
