@@ -1,3 +1,4 @@
+import DatePeriod from '../common/DatePeriod';
 import IEducation from "./education.interface"
 
 const Education = (props: {
@@ -17,10 +18,8 @@ const Education = (props: {
       <h3 className="font-bold text-lg w-full">
         {props.education.institution}
       </h3>
-      <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36">
-        {props.education.startDate}
-        <span className="hidden sm:inline">-</span>
-        {props.education.endDate}
+      <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36 print:text-right">
+        <DatePeriod startDate={props.education.startDate} endDate={props.education.endDate}></DatePeriod>
       </div>
     </div>
     <h4 className="p-1 mb-1">{props.education.studyType} {props.education.area}</h4>

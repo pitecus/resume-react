@@ -1,4 +1,5 @@
 import IPublication from "./publication.interface"
+import dayjs from 'dayjs';
 
 const Publication = (props: {
   publication: IPublication
@@ -18,11 +19,13 @@ const Publication = (props: {
       <h3 className="font-bold text-lg w-full">
         {props.publication.publisher}
       </h3>
+      <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36 print:text-right ">
+        {dayjs(props.publication.releaseDate).format('MMM/YYYY')}
+      </div>
     </div>
     {/* Title */}
     <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:px-0 flex justify-between">
       <span>{props.publication.name}</span>
-      <span className="not-italic text-sm">{props.publication.releaseDate}</span>
     </h4>
     {/* Summary */}
     <p className="mb-2 text-sm print:text-xs">

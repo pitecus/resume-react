@@ -1,3 +1,4 @@
+import DatePeriod from '../common/DatePeriod';
 import IWork from "./work.interface";
 
 const Experience = (props: {
@@ -37,21 +38,8 @@ const Experience = (props: {
         <h3 className="font-bold text-lg w-full">
           {props.work.company} - {props.work.position}
         </h3>
-        <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36">
-          {props.work.startDate}
-          <span className="hidden sm:inline">-</span>
-          {
-            props.work.endDate === 'Current' &&
-            <span>
-              Current
-            </span>
-          }
-          {
-            props.work.endDate !== 'Current' &&
-            <span>
-              {props.work.endDate}
-            </span>
-          }
+        <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36 print:text-right ">
+          <DatePeriod startDate={props.work.startDate} endDate={props.work.endDate}></DatePeriod>
         </div>
       </div>
       {/* Summary */}
