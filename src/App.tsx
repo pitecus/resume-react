@@ -9,6 +9,7 @@ import {
 
 import INavigationItem from './navigation-item.interface';
 import NavigationItem from './NavigationItem';
+import Resume from './resume/Resume';
 
 function App() {
   /**
@@ -67,17 +68,19 @@ function App() {
         </nav>
       </div>
       {/* Navigation */}
-      <Switch>
-        <Route path="/resume">
-          <p>Resume!</p>
-        </Route>
-        <Route path="/changelog">
-          <p>Changelog!</p>
-        </Route>
-        <Route path="*">
-          <Redirect to="/resume" />
-        </Route>
-      </Switch>
+      <div className="min-h-screen flex justify-center">
+        <Switch>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          <Route path="/changelog">
+            <p>Changelog!</p>
+          </Route>
+          <Route path="*">
+            <Redirect to="/resume" />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
