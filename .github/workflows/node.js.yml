@@ -44,7 +44,7 @@ jobs:
           git config push.followTags true
 
           # Update version
-          npm version major --no-git-tag-version
+          npm version minor --no-git-tag-version
           export RELEASE_VERSION=$(node -p "require('./package.json').version")
           git add -A
           git commit -m "ci: release v${RELEASE_VERSION}"
@@ -71,5 +71,4 @@ jobs:
           npm run dist
 
           # Publish
-          # git remote set-url origin https://git:${{ secrets.GH_TOKEN }}@github.com/pitecus/pitecus.github.io.git
           npm run deploy -- --repo https://git:${{ secrets.GH_TOKEN }}@github.com/pitecus/pitecus.github.io.git --branch master --user "Judge+Dredd <pitecus@gmail.com>" --message="$(git log -n 1 --pretty=format:"%s")"
