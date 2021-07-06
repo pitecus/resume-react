@@ -7,6 +7,7 @@ import {
   Switch
 } from "react-router-dom";
 
+import Changelog from './changelog/Changelog';
 import INavigationItem from './navigation-item.interface';
 import NavigationItem from './NavigationItem';
 import Resume from './resume/Resume';
@@ -52,13 +53,13 @@ function App() {
         </div>
       </div>
       {/* Content */}
-      <div className="min-h-screen flex justify-center">
+      <div className="calc(min-h-screen - h-10) flex justify-center">
         <Switch>
           <Route path="/resume">
             <Resume />
           </Route>
           <Route path="/changelog">
-            <p>Changelog!</p>
+            <Changelog />
           </Route>
           <Route path="*">
             <Redirect to="/resume" />
