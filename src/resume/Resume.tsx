@@ -334,7 +334,7 @@ class Resume extends React.Component<
           {/* Footer */}
           <footer className="rounded-lg bg-white shadow p-2 flex space-x-6 text-sm text-indigo-600 font-bold print:hidden">
             {/* Github link */}
-            <a href="https://github.com/pitecus/meirelles"
+            <a href="https://github.com/pitecus/resume-react"
               className="whitespace-nowrap"
               target="_blank"
               rel="noopener noreferrer">
@@ -350,7 +350,8 @@ class Resume extends React.Component<
             </a>
             {/* Build status badge */}
             <div className="flex flex-col justify-center">
-              <img src="https://github.com/pitecus/meirelles/actions/workflows/node.js.yml/badge.svg"
+              <img src="https://github.com/pitecus/resume-react/actions/workflows/node.js.yml/badge.svg"
+                className="w-28 h-5"
                 alt="GitHub actions build status badge" />
             </div>
           </footer>
