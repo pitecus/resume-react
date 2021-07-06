@@ -35,10 +35,10 @@ const Experience = (props: {
       }
       {/* Company, position and period */}
       <div className="flex justify-between space-x-2">
-        <h3 className="font-bold text-lg w-full">
+        <h3 className="font-bold text-lg flex-grow">
           {props.work.company} - {props.work.position}
         </h3>
-        <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36 print:text-right ">
+        <div className="text-sm pl-1 text-right print:whitespace-nowrap">
           <DatePeriod startDate={props.work.startDate} endDate={props.work.endDate}></DatePeriod>
         </div>
       </div>

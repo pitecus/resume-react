@@ -17,7 +17,8 @@ const DatePeriod = (props: {
 
   return <>
     {start}
-    <br />
+    <br className="print:hidden" />
+    <span className="hidden print:inline"> to </span>
     {end}
   </>
 }

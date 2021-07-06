@@ -15,10 +15,10 @@ const Education = (props: {
         src="assets/logo-pucrs.png" />
     }
     <div className="flex justify-between space-x-2">
-      <h3 className="font-bold text-lg w-full">
+      <h3 className="font-bold text-lg flex-grow">
         {props.education.institution}
       </h3>
-      <div className="text-sm w-20 pl-1 sm:w-36 sm:text-right print:w-36 print:text-right">
+      <div className="text-sm pl-1 text-right print:whitespace-nowrap">
         <DatePeriod startDate={props.education.startDate} endDate={props.education.endDate}></DatePeriod>
       </div>
     </div>

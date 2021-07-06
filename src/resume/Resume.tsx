@@ -88,7 +88,7 @@ class Resume extends React.Component<
         <div className="flex flex-col justify-between p-2 space-y-2 min-h-screen max-w-4xl">
           <header className="print:hidden">
             {/* Page title */}
-            <h1 className="ml-10 lg:ml-0 border-b-2 border-gray-300 font-bold text-2xl text-indigo-900 flex justify-between">
+            <h1 className="border-b-2 border-gray-300 font-bold text-2xl text-indigo-900 flex justify-between">
               Resume
             </h1>
           </header>
