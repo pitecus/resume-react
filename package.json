@@ -53,5 +53,5 @@
     "test": "craco test",
     "craco": "craco"
   },
-  "version": "2.1.0"
+  "version": "2.2.0"
 }
