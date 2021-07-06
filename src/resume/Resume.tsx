@@ -19,18 +19,16 @@ class Resume extends React.Component<
   {},
   {
     error: null,
+    /**
+     * List of filtered work experience.
+     */
+    filteredExperience: IWork[],
     isExperienceFiltered: 'true' | 'false',
     isLoaded: boolean,
     release: IRelease | null,
     resume: IResume | null
   }
 > {
-
-  /**
-   * List of filtered work experience.
-   */
-  public filteredExperience?: IWork[];
-
   /**
    * The filtered date.
    */
@@ -44,6 +42,7 @@ class Resume extends React.Component<
     super(props);
     this.state = {
       error: null,
+      filteredExperience: [],
       isExperienceFiltered: 'true',
       isLoaded: false,
       release: null,
@@ -128,7 +127,7 @@ class Resume extends React.Component<
    * @returns the html component.
    */
   public render(): JSX.Element {
-    const { release, resume } = this.state;
+    const { release, resume, filteredExperience } = this.state;
     return <>
       {
         resume !== null &&
@@ -245,7 +244,7 @@ class Resume extends React.Component<
           <main className="flex-grow place-self-stretch">
             {/* Professional Experience */}
             {
-              this.filteredExperience != null &&
+              filteredExperience != null &&
               <div className="rounded-lg bg-white shadow p-2 mb-2 print:shadow-none">
                 <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900 flex justify-between">
                   {/* Section title */}
@@ -260,7 +259,7 @@ class Resume extends React.Component<
                   </label>
                 </h2>
                 {
-                  this.filteredExperience.map((work) =>
+                  filteredExperience.map((work) =>
                     <Experience work={work} key={work.startDate} />)
                 }
               </div>
@@ -365,15 +364,27 @@ class Resume extends React.Component<
    * @param shouldFilter If should perform filter
    */
   private filterWorkExperience(shouldFilter: boolean): void {
-    // Filter.
-    if (shouldFilter) {
-      this.filteredExperience = this.state.resume?.work
-        .filter((work) => work.endDate > this.filterDate);
+    // Return without work.
+    if (this.state.resume?.work == null) {
       return;
     }
 
-    // No filter.
-    this.filteredExperience = this.state.resume?.work;
+    // The filtered experience.
+    let filteredExperience: IWork[];
+
+    // Filter.
+    if (shouldFilter) {
+      filteredExperience = this.state.resume?.work
+        .filter((work) => work.endDate > this.filterDate);
+    } else {
+      // No filter.
+      filteredExperience = this.state.resume?.work;
+    }
+
+    // Update state.
+    this.setState({
+      filteredExperience
+    });
   }
 };
 
