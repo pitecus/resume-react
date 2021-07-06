@@ -7,13 +7,11 @@ import {
  * Navigation item.
  */
 const NavigationItem = (props: {
-  item: INavigationItem,
-  toggleMenu: (e: React.MouseEvent<HTMLAnchorElement>) => void
+  item: INavigationItem
 }) => {
   return (<Link
-    onClick={props.toggleMenu}
     to={props.item.link}
-    className="h-12 py-3 px-3 border">
+    className="h-12 py-3 ml-3">
     {/* Resume */}
     {
       props.item.label === 'resume' &&
@@ -42,7 +40,7 @@ const NavigationItem = (props: {
           d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     }
-    <span className="ml-2 inline align-middle">{props.item.label}</span>
+    <span className="hidden sm:inline">{props.item.label}</span>
   </Link>);
 };
 
