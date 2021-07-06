@@ -144,8 +144,8 @@ class Resume extends React.Component<
             {/* Photo, location and contacts */}
             <div className="whitespace-nowrap sm:border-r sm:pr-2 text-center sm:profile-card">
               <img className="rounded-full shadow-md border-indigo-200 print:hidden m-auto mt-2 border"
-                width="200"
-                height="200"
+                width="202"
+                height="202"
                 alt="portrait"
                 src="assets/leo-meirelles.jpeg" />
               <div className="sm:pb-0 pb-4 print:pb-0">
