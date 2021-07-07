@@ -351,7 +351,8 @@ class Resume extends React.Component<
             {/* Build status badge */}
             <div className="flex flex-col justify-center">
               <img src="https://github.com/pitecus/resume-react/actions/workflows/node.js.yml/badge.svg"
-                className="w-28 h-5"
+                width="111"
+                height="20"
                 alt="GitHub actions build status badge" />
             </div>
           </footer>
