@@ -165,8 +165,73 @@ class Resume extends React.Component<
         </h1>
       </header>
       <header
-        className="p-2 rounded-lg bg-white shadow print:shadow-none flex sm:flex-row flex-col sm:space-x-4 print:flex-row print:space-x-4">
-        <p>List of resources, libraries and about the project</p>
+        className="p-2 rounded-lg bg-white shadow print:shadow-none flex sm:flex-row flex-col print:flex-row ">
+        {/* About */}
+        <div className="shadow p-2 rounded-lg bg-gray-50 sm:w-72 print:w-72 sm:mr-2 print:mr-2 flex-grow">
+          <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
+            About the project
+          </h2>
+          <div className="mt-2 pr-2 flex flex-row flex-wrap -mr-2 text-justify">
+          </div>
+        </div>
+        {/* Libraries */}
+        <div className="shadow p-2 rounded-lg bg-gray-50 sm:w-72 print:w-72 mt-2 sm:mt-0 print:mt-0 flex-grow">
+          <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
+            Libraries and Resources
+          </h2>
+          <div className="mt-2 flex flex-row justify-evenly">
+            <div className="flex-grow border-r mr-2">
+              <ul className="list-disc list-inside text-indigo-600 underline">
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://reactjs.org/" target="_blank">
+                    React <span className="text-xs">17.0.2</span>
+                  </a>
+                </li>
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://reactrouter.com/" target="_blank">
+                    React Router<span className="text-xs">5.2.0</span>
+                  </a>
+                </li>
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://day.js.org/" target="_blank">
+                    DayJS <span className="text-xs">1.10.6</span>
+                  </a>
+                </li>
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://www.typescriptlang.org/" target="_blank">
+                    Typescript <span className="text-xs">4.3.5</span>
+                  </a>
+                </li>
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://tailwindcss.com/" target="_blank">
+                    TailwindCSS <span className="text-xs">17.0.2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex-grow">
+              <ul className="list-disc list-inside text-indigo-600 underline">
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://heroicons.com/" target="_blank">
+                    heroicons
+                  </a>
+                </li>
+                <li>
+                  <a rel="noreferrer noopener"
+                    href="https://iconmonstr.com/" target="_blank">
+                    iconmonstr
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header >
       {/* Main */}
       <main className="flex-grow place-self-stretch">
