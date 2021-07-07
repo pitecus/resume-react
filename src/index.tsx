@@ -3,9 +3,13 @@ import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import App from './App';
+import LogRocket from 'logrocket';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+
+// Initialize Log Rocket.
+LogRocket.init('guwjhj/resume');
 
 ReactDOM.render(
   <React.StrictMode>
