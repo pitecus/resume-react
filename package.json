@@ -1,4 +1,5 @@
 {
+  "author": "Leo Meirelles <pitecus@gmail.com> (https://pitecus.github.io/)",
   "browserslist": {
     "development": [
       "last 1 chrome version",
@@ -12,28 +13,30 @@
     ]
   },
   "dependencies": {
-    "@craco/craco": "^6.1.2",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.14.0",
-    "@types/react": "^17.0.13",
-    "@types/react-dom": "^17.0.8",
-    "dayjs": "^1.10.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
+    "@craco/craco": "6.2.0",
+    "dayjs": "1.10.6",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
-    "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "2.1.0"
   },
+  "description": "Leonardo (Leo) Meirelles online resume, blog and portfolio",
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.7",
-    "autoprefixer": "^9.8.6",
-    "gh-pages": "^3.2.3",
-    "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "@babel/core": "7.14.6",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@testing-library/user-event": "13.1.9",
+    "@types/jest": "26.0.24",
+    "@types/node": "14.17.4",
+    "@types/react": "17.0.13",
+    "@types/react-dom": "17.0.8",
+    "@types/react-router-dom": "5.1.7",
+    "autoprefixer": "9.8.6",
+    "gh-pages": "3.2.3",
+    "postcss": "7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+    "typescript": "4.3.5"
   },
   "eslintConfig": {
     "extends": [
@@ -42,16 +45,26 @@
     ]
   },
   "homepage": "https://pitecus.github.io/",
-  "name": "resume-react",
+  "keywords": [
+    "resume",
+    "blog",
+    "portfolio"
+  ],
+  "license": "Apache-2.0",
+  "name": "leo-meirelles-resume",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pitecus/resume-react.git"
+  },
   "scripts": {
-    "prebuild": "tsc bin/git-to-json.ts",
     "build": "craco build",
+    "craco": "craco",
+    "deploy": "gh-pages --dist build",
     "dist": "NODE_ENV=production craco build",
-    "deploy": "NODE_DEBUG=gh-pages gh-pages --dist build",
+    "prebuild": "tsc bin/git-to-json.ts",
     "start": "craco start",
-    "test": "craco test",
-    "craco": "craco"
+    "test": "craco test"
   },
   "version": "2.2.0"
 }
