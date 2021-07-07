@@ -15,7 +15,7 @@ const NavigationItem = (props: {
   let location = useLocation();
 
   // Change the color based on the route.
-  let routeColor = 'text-gray-200 hover:text-black';
+  let routeColor = 'text-gray-500 hover:text-black';
   let iconColor = '';
   if (location.pathname === props.item.link ? 'underline' : '') {
     routeColor = 'text-indigo-600';
@@ -25,6 +25,7 @@ const NavigationItem = (props: {
   // Return the component.
   return (<Link
     to={props.item.link}
+    aria-label={props.item.label}
     className={`h-12 py-3 ml-3 ${routeColor}`}>
     {/* Resume */}
     {
