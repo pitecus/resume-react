@@ -4,13 +4,19 @@ import {
   Redirect,
   Route,
   HashRouter as Router,
-  Switch
+  Switch,
 } from "react-router-dom";
+import {
+  Suspense,
+  lazy
+} from 'react';
 
-import Changelog from './changelog/Changelog';
 import INavigationItem from './navigation-item.interface';
 import NavigationItem from './NavigationItem';
-import Resume from './resume/Resume';
+
+// Lazy loading routes.
+const Changelog = lazy(() => import('./changelog/Changelog'));
+const Resume = lazy(() => import('./resume/Resume'));
 
 function App() {
   /**
@@ -29,44 +35,47 @@ function App() {
 
   // Return the JSX element.
   return (
-    <Router>
-      {/* Navigation */}
-      <div className="flex justify-center h-10 bg-white print:hidden shadow">
-        <div className="flex flex-grow justify-between max-w-4xl align-middle px-2">
-          {/* Left items */}
-          <div className="h-10 py-2">
-            {/* Logo */}
-            <span className="p-1 rounded shadow-md font-bold text-white bg-indigo-700">LM</span>
-            {/* Navigation links */}
-            <nav
-              className="inline text-md text-indigo-600 font-black capitalize ml-3"
-              role="navigation">
-              {
-                navigationItems.map((navigationItem: INavigationItem) =>
-                  <NavigationItem item={navigationItem} key={navigationItem.label} />
-                )
-              }
-            </nav>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        {/* Navigation */}
+        <div className="flex justify-center h-10 bg-white print:hidden shadow">
+          <div className="flex flex-grow justify-between max-w-4xl align-middle px-2">
+            {/* Left items */}
+            <div className="h-10 py-2">
+              {/* Logo */}
+              <span className="p-1 rounded shadow-md font-bold text-white bg-indigo-700">LM</span>
+              {/* Navigation links */}
+              <nav
+                className="inline text-md text-indigo-600 font-black capitalize ml-3"
+                role="navigation">
+                {
+                  navigationItems.map((navigationItem: INavigationItem) =>
+                    <NavigationItem item={navigationItem} key={navigationItem.label} />
+                  )
+                }
+              </nav>
+            </div>
+            {/* Right items */}
+            <div className="text-right"></div>
           </div>
-          {/* Right items */}
-          <div className="text-right"></div>
         </div>
-      </div>
-      {/* Content */}
-      <div className="calc(min-h-screen - h-10) flex justify-center">
-        <Switch>
-          <Route path="/resume">
-            <Resume />
-          </Route>
-          <Route path="/changelog">
-            <Changelog />
-          </Route>
-          <Route path="*">
-            <Redirect to="/resume" />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+        {/* Content */}
+        <div className="calc(min-h-screen - h-10) flex justify-center">
+          <Switch>
+            <Route path="/resume">
+              <Resume />
+            </Route>
+            <Route path="/changelog">
+              <Changelog />
+            </Route>
+            <Route path="*">
+              <Redirect to="/resume" />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </Suspense>
+
   );
 }
 
