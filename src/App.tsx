@@ -27,7 +27,7 @@ function App() {
     }
   ];
 
-  // Return the function.
+  // Return the JSX element.
   return (
     <Router>
       {/* Navigation */}

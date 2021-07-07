@@ -1,7 +1,9 @@
-import INavigationItem from "./navigation-item.interface";
 import {
-  Link
+  Link,
+  useLocation
 } from "react-router-dom";
+
+import INavigationItem from "./navigation-item.interface";
 
 /**
  * Navigation item.
@@ -9,14 +11,26 @@ import {
 const NavigationItem = (props: {
   item: INavigationItem
 }) => {
+  // Get the current location.
+  let location = useLocation();
+
+  // Change the color based on the route.
+  let routeColor = 'text-gray-200 hover:text-black';
+  let iconColor = '';
+  if (location.pathname === props.item.link ? 'underline' : '') {
+    routeColor = 'text-indigo-600';
+    iconColor = 'text-black';
+  }
+
+  // Return the component.
   return (<Link
     to={props.item.link}
-    className="h-12 py-3 ml-3">
+    className={`h-12 py-3 ml-3 ${routeColor}`}>
     {/* Resume */}
     {
       props.item.label === 'resume' &&
       <svg xmlns="http://www.w3.org/2000/svg"
-        className="inline h-6 w-6 stroke-current text-black"
+        className={`inline h-6 w-6 stroke-current ${iconColor}`}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor">
@@ -31,7 +45,7 @@ const NavigationItem = (props: {
     {
       props.item.label === 'changelog' &&
       <svg xmlns="http://www.w3.org/2000/svg"
-        className="inline h-6 w-6 stroke-current text-black"
+        className={`inline h-6 w-6 stroke-current ${iconColor}`}
         fill="none"
         viewBox="0 0 24 24">
         <path strokeLinecap="round"
