@@ -172,6 +172,8 @@ class Resume extends React.Component<
             About the project
           </h2>
           <div className="mt-2 pr-2 flex flex-row flex-wrap -mr-2 text-justify">
+            <p>This project started as an online resume that became a portfolio. It shows a responsive and custom design and showcase how to use React and TailwindCSS.</p>
+            <p className="pt-2">It uses GitHub actions to generate the changelog, create a release tag, and publish application in my personal website.</p>
           </div>
         </div>
         {/* Libraries */}
