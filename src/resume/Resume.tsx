@@ -11,6 +11,7 @@ import Publication from "./Publication";
 import React from "react";
 import Skill from "./Skill";
 import dayjs from 'dayjs';
+import QRCode from 'qrcode';
 
 /**
  * Resume component.
@@ -25,6 +26,7 @@ class Resume extends React.Component<
     filteredExperience: IWork[],
     isExperienceFiltered: 'true' | 'false',
     isLoaded: boolean,
+    qrCode: string | null,
     release: IRelease | null,
     resume: IResume | null
   }
@@ -45,6 +47,7 @@ class Resume extends React.Component<
       filteredExperience: [],
       isExperienceFiltered: 'true',
       isLoaded: false,
+      qrCode: null,
       release: null,
       resume: null
     };
@@ -104,6 +107,16 @@ class Resume extends React.Component<
           });
         }
       );
+
+    // Generate a QR code for printed version.
+    QRCode.toDataURL(
+      window.location.href, {
+      errorCorrectionLevel: 'low'
+    }, (error, url) => {
+      this.setState({
+        qrCode: url
+      });
+    });
   }
 
   /**
@@ -127,15 +140,19 @@ class Resume extends React.Component<
    * @returns the html component.
    */
   public render(): JSX.Element {
-    const { release, resume, filteredExperience } = this.state;
+    const { release, resume, filteredExperience, qrCode } = this.state;
     return <>
       {
         resume !== null &&
         <div className="flex flex-col justify-between p-2 space-y-2 min-h-screen max-w-4xl">
           <header className="print:hidden">
             {/* Page title */}
-            <h1 className="border-b-2 border-gray-300 font-bold text-2xl text-indigo-900 flex justify-between">
+            <h1 className="border-b-2 border-gray-300 font-bold text-2xl text-indigo-900 flex justify-between items-end">
               Resume
+              {
+                release !== null &&
+                <span className="text-gray-500 text-xs">v{release.version} </span>
+              }
             </h1>
           </header>
           {/* Header */}
@@ -219,21 +236,32 @@ class Resume extends React.Component<
             {/* Summary and links */}
             <div className="flex flex-col w-full justify-between">
               {/* Summary */}
-              <p className="pb-2 text-md print:text-sm ">{resume.basics.summary}</p>
-              {/* Links */}
-              <div className="flex flex-row flex-wrap text-indigo-600">
-                {/* Links */}
+              <p className="text-md print:text-sm">
                 {
-                  resume.basics.profiles &&
-                  resume.basics.profiles.map((profile: IProfile) =>
-                    <Profile key={profile.network} profile={profile} />
-                  )
+                  qrCode && <img className="float-right hidden print:inline"
+                    width="50"
+                    height="50"
+                    alt="QR code"
+                    src={qrCode} />
                 }
+                {resume.basics.summary}
+                </p>
+              {/* Links and version */}
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-row content-end flex-wrap text-indigo-600">
+                  {/* Links */}
+                  {
+                    resume.basics.profiles &&
+                    resume.basics.profiles.map((profile: IProfile) =>
+                      <Profile key={profile.network} profile={profile} />
+                    )
+                  }
+                </div>
                 {/* Version */}
                 {
                   release !== null &&
-                  <div className="flex flex-grow items-end justify-end place-items-end text-gray-500 text-xs">
-                    <span className="text-right -mb-1">v{release.version} </span>
+                  <div className="flex flex-grow items-end justify-end">
+                    <span className="text-right -mb-1 text-gray-500 text-xs hidden print:inline">v{release.version} </span>
                   </div>
                 }
               </div>
@@ -260,7 +288,7 @@ class Resume extends React.Component<
                 </h2>
                 {
                   filteredExperience.map((work: IWork, index: number, array: IWork[]) =>
-                    <Experience work={work} key={work.startDate} isLast={index + 1 === array.length}/>)
+                    <Experience work={work} key={work.startDate} isLast={index + 1 === array.length} />)
                 }
               </div>
             }
