@@ -1,4 +1,5 @@
 import './App.css';
+import { PrinterIcon } from '@heroicons/react/outline'
 
 import {
   Redirect,
@@ -56,7 +57,12 @@ function App() {
               </nav>
             </div>
             {/* Right items */}
-            <div className="text-right"></div>
+            <div className="text-right h-10 py-2">
+              <PrinterIcon
+                onClick={window.print}
+                className="sm:hidden inline h-6 w-6 text-gray-500 stroke-current"/>
+              <span className="sr-only">Print</span>
+            </div>
           </div>
         </div>
         {/* Content */}
