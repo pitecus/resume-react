@@ -4,6 +4,7 @@ const Profile = (props: {
   profile: IProfile
 }) => {
   return <a
+    className="whitespace-nowrap mr-6"
     rel="noopener noreferrer"
     target="_blank"
     href={props.profile.url}>

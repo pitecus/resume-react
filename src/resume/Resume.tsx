@@ -221,7 +221,7 @@ class Resume extends React.Component<
               {/* Summary */}
               <p className="pb-2 text-md print:text-sm ">{resume.basics.summary}</p>
               {/* Links */}
-              <div className="flex flex-row space-x-6 text-indigo-600">
+              <div className="flex flex-row flex-wrap text-indigo-600">
                 {/* Links */}
                 {
                   resume.basics.profiles &&
