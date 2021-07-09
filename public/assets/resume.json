@@ -24,6 +24,11 @@
         "network": "LinkedIn",
         "url": "https://www.linkedin.com/in/leo-meirelles/",
         "username": "Leo Meirelles"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/pitecus",
+        "username": "pitecus"
       }
     ],
     "summary": "Passionate for quality, best practices, and effortless usability (for developers and end users), problem solving oriented engineer with experience in UI/UX, continuous delivery and integration, micro-frontend and microservices architecture, and containers. Quick to adapt to changes of dynamic environments and requirements to provide the optimal solution.",
