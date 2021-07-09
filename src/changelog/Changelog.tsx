@@ -171,9 +171,9 @@ class Resume extends React.Component<
           <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
             About the project
           </h2>
-          <div className="mt-2 pr-2 flex flex-row flex-wrap -mr-2 text-justify">
-            <p>This project started as an online resume that became a portfolio. It shows a responsive and custom design and showcase how to use React and TailwindCSS.</p>
-            <p className="pt-2">It uses GitHub actions to generate the changelog, create a release tag, and publish application in my personal website.</p>
+          <div className="mt-2 pr-2 flex flex-row flex-wrap -mr-2">
+            <p>This project started as an online resume that became a portfolio. It shows a custom responsive design and showcases how to use React and TailwindCSS.</p>
+            <p className="pt-2">It uses GitHub Actions to generate the changelog, create a release tag, and publish the web application on my GitHub Pages.</p>
           </div>
         </div>
         {/* Libraries */}
@@ -240,7 +240,7 @@ class Resume extends React.Component<
         {/* Loop throught the changelogs entries */}
         {
           releases.map((release) =>
-            <Release release={release} />)
+            <Release key={release.version} release={release} />)
         }
       </main>
     </div>;
