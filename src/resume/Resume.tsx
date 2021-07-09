@@ -245,7 +245,7 @@ class Resume extends React.Component<
             {/* Professional Experience */}
             {
               filteredExperience != null &&
-              <div className="rounded-lg bg-white shadow p-2 mb-2 print:shadow-none">
+              <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:-mt-2 print:shadow-none">
                 <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900 flex justify-between">
                   {/* Section title */}
                   <span>Experience</span>
@@ -259,15 +259,15 @@ class Resume extends React.Component<
                   </label>
                 </h2>
                 {
-                  filteredExperience.map((work) =>
-                    <Experience work={work} key={work.startDate} />)
+                  filteredExperience.map((work: IWork, index: number, array: IWork[]) =>
+                    <Experience work={work} key={work.startDate} isLast={index + 1 === array.length}/>)
                 }
               </div>
             }
             {/* Publications and conferences */}
             {
               resume.publications !== null &&
-              <div className="rounded-lg bg-white shadow p-2 mb-2 print:shadow-none">
+              <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:-mt-2 print:shadow-none">
                 <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
                   <span>Conferences</span>
                 </h2>
@@ -281,7 +281,7 @@ class Resume extends React.Component<
             {/* Education and languages*/}
             {
               (resume.education !== null || resume.languages !== null) &&
-              <div className="rounded-lg bg-white shadow p-2 mb-2 print:shadow-none">
+              <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:-mt-2 print:shadow-none">
                 {/* Education */}
                 {
                   resume.education !== null &&

@@ -3,9 +3,11 @@ import IWork from "./work.interface";
 
 const Experience = (props: {
   work: IWork
+  isLast: boolean
 }) => {
+
   return <>
-    <div className="mt-2 border-b">
+    <div className={`mt-2 ${props.isLast ? '' : 'border-b'}`}>
       {/* ADP */}
       {
         props.work.company === 'ADP' &&
@@ -43,7 +45,7 @@ const Experience = (props: {
         </div>
       </div>
       {/* Summary */}
-      <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:px-0">{props.work.summary}</h4>
+      <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:mb-0 print:bg-white print:px-0">{props.work.summary}</h4>
       {/* Highlights */}
       {
         props.work.highlights.map((highlight: string) =>

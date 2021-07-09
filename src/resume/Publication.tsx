@@ -24,7 +24,7 @@ const Publication = (props: {
       </div>
     </div>
     {/* Title */}
-    <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:px-0 flex justify-between">
+    <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:mb-0 print:bg-white print:px-0 flex justify-between">
       <span>{props.publication.name}</span>
     </h4>
     {/* Summary */}
