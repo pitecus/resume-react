@@ -7,7 +7,7 @@ const Experience = (props: {
 }) => {
 
   return <>
-    <div className={`mt-2 ${props.isLast ? '' : 'border-b'}`}>
+    <div className={`mt-2 print:mt-0.5 ${props.isLast ? '' : 'border-b'}`}>
       {/* ADP */}
       {
         props.work.company === 'ADP' &&
