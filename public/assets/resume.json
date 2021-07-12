@@ -131,8 +131,9 @@
       "company": "ADP",
       "endDate": "Current",
       "highlights": [
-        "Lead the GitOps implementation for CI/CD SDLC, integrating with code review, SonarQube, automated releases using containers and deployments. Work on DevSecOps by scanning containers for vulnerabilities and npm audits for Javascript projects. Improve the continuous E2E cross-browser tests using SauceLabs, integrating with internal automation services using container sidecar and VPN/proxy connections.",
-        "Architected and replaced an Adobe Flash application using Business Objects Enterprise XML APIs by Angular 11 and HighCharts. Working on an application to identify incorrect paychecks using AWS Lambda (backend), DynamoDB, SQS, S3, and Kubernetes Helm Charts (frontend)."
+        "I replaced an Adobe Flash application with XML/SOAP API by reverse-engineering the functionality and built a modern web application in 6 months with a team of 3 developers.",
+        "I integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework for simple adoption across teams using VPN proxies and side-car containers.",
+        "Currently, I'm building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It will prevent security incidents for clients and employees. It is a service to allow easy integration across multiple payroll services."
       ],
       "position": "Principal Architect",
       "startDate": "2018-09-21",
@@ -143,8 +144,8 @@
       "company": "ADP",
       "endDate": "2018-09-21",
       "highlights": [
-        "I worked with Product Owners, Project Managers, and multiple teams in different countries to deliver bi-weekly features, coordinating dependencies and requirements. Also, improved the release cycle by using micro-frontend and micro-services containers.",
-        "Advocate for meaningful code reviews, small pull requests, automated code quality with lint, SonarQube, and unit tests. Upgrade the application from AngularJS 1.4 to Angular 6 by running both at the same time."
+        "I was the lead frontend engineer on a multi-country payroll application with more than 100 people in multiple countries and business units. Engaged in UI/UX reviews, prioritized features and, facilitated the development between teams. Also, I enforced code standards, code reviews and, unit tests. I built containers and implemented a CI/CD process for deployments in 4 different environments.",
+        "Later I improved the CI/CD process using GitOps workflow. After code review, it would deploy the changes in 10 minutes and under 3 minutes after release approvals in higher environments."
       ],
       "position": "Principal Software Engineer",
       "startDate": "2016-10-01",
