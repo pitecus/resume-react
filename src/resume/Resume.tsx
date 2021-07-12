@@ -8,10 +8,10 @@ import IWork from './work.interface';
 import Language from './Language';
 import Profile from "./Profile";
 import Publication from "./Publication";
+import QRCode from 'qrcode';
 import React from "react";
 import Skill from "./Skill";
 import dayjs from 'dayjs';
-import QRCode from 'qrcode';
 
 /**
  * Resume component.
@@ -236,7 +236,7 @@ class Resume extends React.Component<
             {/* Summary and links */}
             <div className="flex flex-col w-full justify-between">
               {/* Summary */}
-              <p className="text-md print:text-sm">
+              <p className="text-md sm:text-xl print:text-sm">
                 {
                   qrCode && <img className="float-right hidden print:inline"
                     width="50"
@@ -245,7 +245,7 @@ class Resume extends React.Component<
                     src={qrCode} />
                 }
                 {resume.basics.summary}
-                </p>
+              </p>
               {/* Links and version */}
               <div className="flex flex-row justify-between">
                 <div className="flex flex-row content-end flex-wrap text-indigo-600">
