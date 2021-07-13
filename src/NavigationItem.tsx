@@ -1,8 +1,9 @@
+import { BriefcaseIcon, ClipboardListIcon } from '@heroicons/react/outline';
 import {
   Link,
   useLocation
 } from "react-router-dom";
-import { BriefcaseIcon, ClipboardListIcon } from '@heroicons/react/outline';
+
 import INavigationItem from "./navigation-item.interface";
 
 /**
@@ -19,7 +20,7 @@ const NavigationItem = (props: {
   let iconColor = '';
   if (location.pathname === props.item.link ? 'underline' : '') {
     routeColor = 'text-indigo-600';
-    iconColor = 'text-black';
+    iconColor = 'text-indigo-600';
   }
 
   // Return the component.
@@ -30,7 +31,7 @@ const NavigationItem = (props: {
     {/* Resume */}
     {
       props.item.label === 'resume' &&
-      <BriefcaseIcon className={`inline h-6 w-6 stroke-current ${iconColor}`}/>
+      <BriefcaseIcon className={`inline h-6 w-6 stroke-current ${iconColor}`} />
     }
 
     {/* Changelog */}
