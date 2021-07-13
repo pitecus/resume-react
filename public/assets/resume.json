@@ -69,41 +69,67 @@
   "skills": [
     {
       "keywords": [
-        "User Interface",
-        "User Experience",
         "Angular",
         "TypeScript",
+        "React",
         "Javascript",
+        "User Interface (UI)",
+        "User Experience (UX)",
         "JSON",
         "CSS",
         "HTML",
         "XML",
-        "Google Analytics",
-        "ReactJS",
-        "Lambda functions"
+        "Cross-Origin Resource Sharing (CORS)",
+        "Content-Security-Policy (CSP)",
+        "RestFul API",
+        "GraphQL"
       ],
       "level": "Master",
-      "name": "Frontend/Backend"
+      "name": "Development"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "Docker swarm",
+        "Kubernetes",
+        "Dockerfile",
+        "docker-compose",
+        "helm charts"
+      ],
+      "level": "Master",
+      "name": "Containers"
+    },
+    {
+      "keywords": [
+        "DevSecOps",
+        "AWS",
+        "Jenkinsfile",
+        "Splunk",
+        "Ansible",
+        "AWS IAM roles",
+        "AWS Cloudformation",
+        "AWS API Gateway",
+        "AWS Load Balancer",
+        "AWS Lambda"
+      ],
+      "level": "Master",
+      "name": "DevOps"
     },
     {
       "keywords": [
         "Linux",
-        "Docker swarm",
-        "Containers",
-        "Kubernetes",
         "TCP/IP",
         "Network",
-        "DevSecOps",
-        "AWS",
-        "AWS Cloudformation, Lambda, API Gateway",
-        "Jenkinsfile",
-        "Splunk",
-        "Instana",
-        "AWS API Gateway",
-        "AWS Load balancer"
+        "DNS",
+        "awk",
+        "sed",
+        "bash",
+        "curl",
+        "NGINX",
+        "Nest"
       ],
       "level": "Master",
-      "name": "DevOps"
+      "name": "Linux"
     },
     {
       "keywords": [
@@ -119,7 +145,11 @@
         "Lucidchart",
         "Jenkins",
         "SonarQube",
-        "Artifactory"
+        "Artifactory",
+        "Google Analytics",
+        "Splunk",
+        "Instana",
+        "LogRocket"
       ],
       "level": "Master",
       "name": "Applications"
@@ -131,25 +161,25 @@
       "company": "ADP",
       "endDate": "Current",
       "highlights": [
-        "I replaced an Adobe Flash application with XML/SOAP API by reverse-engineering the functionality and built a modern web application in 6 months with a team of 3 developers.",
-        "I integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework for simple adoption across teams using VPN proxies and side-car containers.",
-        "Currently, I'm building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It will prevent security incidents for clients and employees. It is a service to allow easy integration across multiple payroll services."
+        "Build and implemented a new web application in 6 months with a team of 3 developers by reverse engineering an Adobe Flash application with XML/SOAP API before the end of 2021.",
+        "Integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework using VPN reverse-proxies and side-car containers.",
+        "Building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It will prevent security incidents for clients and employees. It is a service to allow easy integration across multiple payroll services."
       ],
       "position": "Principal Architect",
       "startDate": "2018-09-21",
-      "summary": "Design, build, audit, and deploy containerized applications. Architect integration solutions. Improve security and optimize release cycles.",
+      "summary": "Design and build full-stack applications, and create, audit, and deploy containers. Improve security, advocate for automated tests, and optimize release workflow.",
       "website": "https://www.adp.com"
     },
     {
       "company": "ADP",
       "endDate": "2018-09-21",
       "highlights": [
-        "I was the lead frontend engineer on a multi-country payroll application with more than 100 people in multiple countries and business units. Engaged in UI/UX reviews, prioritized features and, facilitated the development between teams. Also, I enforced code standards, code reviews and, unit tests. I built containers and implemented a CI/CD process for deployments in 4 different environments.",
-        "Later I improved the CI/CD process using GitOps workflow. After code review, it would deploy the changes in 10 minutes and under 3 minutes after release approvals in higher environments."
+        "Lead the frontend engineer team on a multi-country payroll application with more than 100 people in multiple countries and business units. Engaged in UI/UX reviews, prioritized features and, facilitated the development between teams. Enforced code standards, performed code reviews, and helped with unit tests. Built containers and implemented a CI/CD pipeline for deployments in 4 different environments.",
+        "Improved existing CI/CD pipeline using GitOps. It would take less than 10 minutes for a build and under 3 minutes for deployments."
       ],
       "position": "Principal Software Engineer",
       "startDate": "2016-10-01",
-      "summary": "Lead UI/UX + DevOps enginner for an application to integrate multi-country payroll systems with human capital management.",
+      "summary": "Lead UI/UX + DevOps engineers for an application to integrate multi-country payroll systems with human capital management.",
       "website": "https://www.adp.com"
     },
     {
