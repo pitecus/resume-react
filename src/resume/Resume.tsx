@@ -349,13 +349,13 @@ class Resume extends React.Component<
                 <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
                   Technical Skills
                 </h2>
-                <dl>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-2 gap-2 mt-2">
                   {
                     resume.skills.map(skill =>
                       <Skill skill={skill} key={skill.name}></Skill>
                     )
                   }
-                </dl>
+                </div>
               </div>
             }
           </main>

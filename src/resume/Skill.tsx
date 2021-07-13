@@ -3,12 +3,12 @@ import ISkill from "./skill.interface"
 const Skill = (props: {
   skill: ISkill
 }) => {
-  return <>
-    <dt className="font-bold text-lg mb-1 mt-2">{props.skill.name}</dt>
-    <dd className="text-sm">
-      {props.skill.keywords?.join(', ')}
-    </dd>
-  </>
+  return <div className="border-b print:shadow-none">
+    <h2 className="font-bold rounded-lg p-1 text-md bg-gray-100 print:bg-white">
+      {props.skill.name}
+    </h2>
+    <span className="text-sm print:text-xs">{props.skill.keywords?.join(', ')}</span>
+  </div>
 }
 
 /**
