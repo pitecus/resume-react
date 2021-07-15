@@ -61,7 +61,7 @@
       "name": "GitOps + Ferris Wheel",
       "publisher": "ADP Global Product & Development Connect",
       "releaseDate": "2020-09-30",
-      "summary": "CI/CD backed by Bitbucket. It allows having one single source of truth, process transparency, and auditing in one single place. Environment configuration, release approvals and notifications, straightforward process and responsibilities – all in one place, accessible to everyone, and traceable. And a rollback is just a Pull-Request away.",
+      "summary": "GitOps is a process of how to have your whole application (development, infrastructure, releases, deployments, and changelog) in BitBucket. It may sound too extreme, but developers and DevOps are using Bitbucket daily already. It takes advantage of existing tools to automate everything so that everyone can focus on what matters: new features and stability. Since we adopted the GitOps process, we are at 700+ releases, 0 downtime deployments, with rollback happening in minutes. The right people approve new releases without having to send emails or text messages. Most importantly, it keeps track of changes that allow quick troubleshooting by knowing when they happened.",
       "website": "https://tech.adp.com/2020/11/20/adps-annual-developers-conference-video"
     }
   ],
@@ -88,14 +88,7 @@
       "name": "Development"
     },
     {
-      "keywords": [
-        "Docker",
-        "Docker swarm",
-        "Kubernetes",
-        "Dockerfile",
-        "docker-compose",
-        "helm charts"
-      ],
+      "keywords": ["Docker", "Docker swarm", "Kubernetes", "Dockerfile", "docker-compose", "helm charts"],
       "level": "Master",
       "name": "Containers"
     },
@@ -116,18 +109,7 @@
       "name": "DevOps"
     },
     {
-      "keywords": [
-        "Linux",
-        "TCP/IP",
-        "Network",
-        "DNS",
-        "awk",
-        "sed",
-        "bash",
-        "curl",
-        "NGINX",
-        "Nest"
-      ],
+      "keywords": ["Linux", "TCP/IP", "Network", "DNS", "awk", "sed", "bash", "curl", "NGINX", "Nest"],
       "level": "Master",
       "name": "Linux"
     },
@@ -137,17 +119,7 @@
       "name": "Architecture"
     },
     {
-      "keywords": [
-        "Sketch",
-        "Lucidchart",
-        "Jenkins",
-        "SonarQube",
-        "Artifactory",
-        "Google Analytics",
-        "Splunk",
-        "Instana",
-        "LogRocket"
-      ],
+      "keywords": ["Sketch", "Lucidchart", "Jenkins", "SonarQube", "Artifactory", "Google Analytics", "Splunk", "Instana", "LogRocket"],
       "level": "Master",
       "name": "Applications"
     }
