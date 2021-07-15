@@ -1,21 +1,21 @@
-import './index.css';
+import "./index.css";
 
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-import App from './App';
-import LogRocket from 'logrocket';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import LogRocket from "logrocket";
+import React from "react";
+import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
 
 // Initialize Log Rocket.
-LogRocket.init('guwjhj/resume');
+LogRocket.init("guwjhj/resume");
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

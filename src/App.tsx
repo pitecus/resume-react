@@ -1,19 +1,11 @@
 import './App.css';
-import { PrinterIcon } from '@heroicons/react/outline'
 
-import {
-  Redirect,
-  Route,
-  HashRouter as Router,
-  Switch,
-} from "react-router-dom";
-import {
-  Suspense,
-  lazy
-} from 'react';
+import { Redirect, Route, HashRouter as Router, Switch } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
 import INavigationItem from './navigation-item.interface';
 import NavigationItem from './NavigationItem';
+import { PrinterIcon } from '@heroicons/react/outline';
 
 // Lazy loading routes.
 const Changelog = lazy(() => import('./changelog/Changelog'));
@@ -46,21 +38,15 @@ function App() {
               {/* Logo */}
               <span className="p-1 rounded shadow-md font-bold text-white bg-indigo-700">LM</span>
               {/* Navigation links */}
-              <nav
-                className="inline text-md text-indigo-600 font-black capitalize ml-3"
-                role="navigation">
-                {
-                  navigationItems.map((navigationItem: INavigationItem) =>
-                    <NavigationItem item={navigationItem} key={navigationItem.label} />
-                  )
-                }
+              <nav className="inline text-md text-indigo-600 font-black capitalize ml-3" role="navigation">
+                {navigationItems.map((navigationItem: INavigationItem) => (
+                  <NavigationItem item={navigationItem} key={navigationItem.label} />
+                ))}
               </nav>
             </div>
             {/* Right items */}
             <div className="text-right h-10 py-2">
-              <PrinterIcon
-                onClick={window.print}
-                className="sm:hidden inline h-6 w-6 text-gray-500 stroke-current"/>
+              <PrinterIcon onClick={window.print} className="sm:hidden inline h-6 w-6 text-gray-500 stroke-current" />
               <span className="sr-only">Print</span>
             </div>
           </div>
@@ -81,7 +67,6 @@ function App() {
         </div>
       </Router>
     </Suspense>
-
   );
 }
 

@@ -11,7 +11,7 @@ interface INavigationItem {
    * Link.
    */
   link: string;
-};
+}
 
 /**
  * Export the interface.

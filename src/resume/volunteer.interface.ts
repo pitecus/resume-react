@@ -1,6 +1,6 @@
 interface IVolunteer {
   endDate: string;
-  highlights?: (string)[] | null;
+  highlights?: string[] | null;
   organization: string;
   position: string;
   startDate: string;

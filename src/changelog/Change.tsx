@@ -1,8 +1,6 @@
-import IChangelogDetail from "./changelog-detail.interface";
+import IChangelogDetail from './changelog-detail.interface';
 
-const Change = (props: {
-  change: IChangelogDetail;
-}) => {
+const Change = (props: { change: IChangelogDetail }) => {
   return <li>{props.change.message.subject}</li>;
 };
 

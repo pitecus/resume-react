@@ -17,4 +17,7 @@ interface IBasics {
   website: string;
 }
 
+/**
+ * Export the interface.
+ */
 export default IBasics;

@@ -4,4 +4,7 @@ interface IProfile {
   username: string;
 }
 
+/**
+ * Export the interface.
+ */
 export default IProfile;

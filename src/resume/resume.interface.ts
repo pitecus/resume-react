@@ -22,4 +22,7 @@ interface IResume {
   work: IWork[];
 }
 
+/**
+ * Export the interface.
+ */
 export default IResume;

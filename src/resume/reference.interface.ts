@@ -3,4 +3,7 @@ interface IReference {
   reference: string;
 }
 
+/**
+ * Export the interface.
+ */
 export default IReference;

@@ -1,4 +1,4 @@
-import IChangelogDetail from "./changelog-detail.interface";
+import IChangelogDetail from './changelog-detail.interface';
 
 /**
  * Release.
@@ -21,7 +21,7 @@ interface IRelease {
     /**
      * Changes.
      */
-    changes: IChangelogDetail[]
+    changes: IChangelogDetail[];
   }[];
 }
 

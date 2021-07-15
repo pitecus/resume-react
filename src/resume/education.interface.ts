@@ -1,6 +1,6 @@
 interface IEducation {
   area: string;
-  courses?: (string)[] | null;
+  courses?: string[] | null;
   endDate: string;
   gpa: string;
   institution: string;
@@ -8,4 +8,7 @@ interface IEducation {
   studyType: string;
 }
 
+/**
+ * Export the interface.
+ */
 export default IEducation;
