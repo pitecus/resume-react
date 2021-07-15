@@ -158,21 +158,21 @@
       "company": "ADP",
       "endDate": "Current",
       "highlights": [
-        "Build and implemented a new web application in 6 months with a team of 3 developers by reverse engineering an Adobe Flash application with XML/SOAP API before the end of 2021.",
+        "Reverse-engineered an Adobe Flash application with XML/SOAP API and replaced it with a new web application with a small team under a tight deadline.",
         "Integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework using VPN reverse-proxies and side-car containers.",
-        "Building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It will prevent security incidents for clients and employees. It is a service to allow easy integration across multiple payroll services."
+        "Building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It prevents security incidents for clients and employees; while allowing seamless integrations across multiple payroll services."
       ],
       "position": "Principal Architect",
       "startDate": "2018-09-21",
-      "summary": "Design and build full-stack applications, and create, audit, and deploy containers. Improve security, advocate for automated tests, and optimize release workflow.",
+      "summary": "Design and build full-stack applications; create, audit, and deploy containers. Improve security, advocate for automated tests, and optimize release workflow.",
       "website": "https://www.adp.com"
     },
     {
       "company": "ADP",
       "endDate": "2018-09-21",
       "highlights": [
-        "Lead the frontend engineer team on a multi-country payroll application with more than 100 people in multiple countries and business units. Engaged in UI/UX reviews, prioritized features and, facilitated the development between teams. Enforced code standards, performed code reviews, and helped with unit tests. Built containers and implemented a CI/CD pipeline for deployments in 4 different environments.",
-        "Improved existing CI/CD pipeline using GitOps. It would take less than 10 minutes for a build and under 3 minutes for deployments."
+        "Lead the frontend engineer team on a multi-country payroll application. I provided guidance and direction to multiple co-workers in multiple geographic locations. Engaged in UI/UX reviews, prioritized features and, facilitated the development between teams. Enforced code standards, performed code reviews, and helped with unit tests. Built containers and implemented a CI/CD pipeline for deployments in 4 different environments.",
+        "Improved existing CI/CD pipeline using GitOps. Automated the approval process of releases, improved the deployment time (from 30 to 3 minutes), and optimized the build by updating only the necessary services (from 40 to 10 minutes)."
       ],
       "position": "Principal Software Engineer",
       "startDate": "2016-10-01",
@@ -183,7 +183,7 @@
       "company": "Google",
       "endDate": "2016-10-01",
       "highlights": [
-        "Architect, design and integrate AngularJS 1.4 components for Cloud SQL inside Google Cloud Platform. Use Google Analytics to improve user experience by evaluating and prioritizing features.",
+        "Architected, design and integrate AngularJS 1.4 components for Cloud SQL inside Google Cloud Platform. Use Google Analytics to improve user experience by evaluating and prioritizing features.",
         "Coordinate with Google Site Reliability Engineering, project manager and back-end API team to prioritize bugs, features and release using experiments. Provide support for internal and external users. Create utility tools in Bash shell script, NodeJS and Chrome Extensions for internal usage."
       ],
       "position": "Senior Software Engineer",
