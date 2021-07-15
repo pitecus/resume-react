@@ -130,8 +130,7 @@
       "company": "ADP",
       "endDate": "Current",
       "highlights": [
-        "Reverse-engineered an Adobe Flash application with XML/SOAP API and replaced it with a new web application with a small team under a tight deadline.",
-        "Integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework using VPN reverse-proxies and side-car containers.",
+        "Reverse-engineered an Adobe Flash application with XML/SOAP API and replaced it with a new web application with a small team under a tight deadline. Integrated cross-browsing tests using SauceLabs with the ADP's CI/CD framework using VPN reverse-proxies and side-car containers.",
         "Building a proof-of-concept application to recognize payroll documents misdeliveries using images from PDF documents. It prevents security incidents for clients and employees; while allowing seamless integrations across multiple payroll services."
       ],
       "position": "Principal Architect",
@@ -167,20 +166,20 @@
       "company": "The New York Times",
       "endDate": "2015-04-30",
       "highlights": [
-        "Create new features, improve system’s performance and develop new applications in Business Intelligence analytics ecosystem. Develop software prototypes to streamline data access. Responsible for tag management and tracking systems for page and modules views, customer behavior, A/B testings, and subscription funnel.",
-        "Develop in MEAN stack. Enhance tracking data through systems integration. Create front-end applications for user friendly interaction with REST services. Partner with multiple stakeholders to prioritize features and manage development cycles."
+        "Create new features, improve system performance and develop new applications in the Business Intelligence analytics ecosystem. Develop software prototypes to streamline data access. Responsible for tag management and tracking systems for page and modules views, customer behavior, A/B testings, and subscription funnel.",
+        "Used MEAN stack (MongoDB, Express, Angular, and Node.JS) to enhanced user behavior data tracking. Created applications for user-friendly interaction with REST services. Worked together with multiple stakeholders to prioritize features and manage development cycles."
       ],
       "position": "Senior Software Engineer",
       "startDate": "2013-06-01",
-      "summary": "Frontend development, API integration, Business Inteligence, user behavior analysis",
+      "summary": "Developed frontend features, integrating with API and Business Intelligence tools, interpreting user behavior.",
       "website": "https://www.nytimes.com"
     },
     {
       "company": "The New York Times",
       "endDate": "2013-06-01",
       "highlights": [
-        "System architect for NYTimes-China site: planned the infra-structure, built the servers and successfully transitioned to the implementation team. Developed SEO (search engine optimization) features using ModEST publishing framework. Worked on Datacenter Move (DCI) project, providing solutions for server configurations migration between iPlanet and Apache.",
-        "Provided support and development for NY Times web site. Responsible for performance, stability and improvement of hundreds of servers in Production in two Datacenters (East and West) with millions of daily page views."
+        "Designed the architecture for the NYTimes-China website: planned the infrastructure, built the servers, and successfully transitioned to the implementation team. Developed SEO (search engine optimization) features using ModEST publishing framework. Worked on Datacenter Move (DCI) project, providing solutions for server configurations migration between iPlanet and Apache.",
+        "Fixed issues and developed new features for the NY Times website. Responsible for performance, stability, and improvement of hundreds of servers in Production in two Datacenters (East and West) with millions of daily page views."
       ],
       "position": "Web Engineer",
       "startDate": "2011-10-17",
