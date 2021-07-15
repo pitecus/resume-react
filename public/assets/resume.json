@@ -48,7 +48,7 @@
   "interests": [],
   "languages": [
     {
-      "fluency": "Bilingual",
+      "fluency": "Fluent",
       "language": "English"
     },
     {
@@ -132,10 +132,7 @@
       "name": "Linux"
     },
     {
-      "keywords": [
-        "Microservices",
-        "Micro-frontend"
-      ],
+      "keywords": ["Microservices", "Micro-frontend"],
       "level": "Master",
       "name": "Architecture"
     },
