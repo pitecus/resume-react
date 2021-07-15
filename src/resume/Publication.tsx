@@ -20,7 +20,7 @@ const Publication = (props: { publication: IPublication }) => {
         <span>{props.publication.name}</span>
       </h4>
       {/* Summary */}
-      <p className="mb-2 text-sm print:text-xs">{props.publication.summary}</p>
+      <p className="text-sm print:text-xs">{props.publication.summary}</p>
     </div>
   );
 };

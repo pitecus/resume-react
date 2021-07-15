@@ -248,7 +248,7 @@ class Resume extends React.Component<
             <main className="flex-grow place-self-stretch">
               {/* Professional Experience */}
               {filteredExperience != null && (
-                <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:-mt-2 print:shadow-none">
+                <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:mt-4 print:shadow-none">
                   <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900 flex justify-between">
                     {/* Section title */}
                     <span>Experience</span>
@@ -270,7 +270,7 @@ class Resume extends React.Component<
               )}
               {/* Publications and conferences */}
               {resume.publications !== null && (
-                <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:-mt-2 print:shadow-none">
+                <div className="rounded-lg bg-white shadow p-2 mb-2 print:pt-0 print:mt-4 print:shadow-none">
                   <h2 className="border-b-2 border-gray-300 font-bold text-xl text-indigo-900">
                     <span>Conferences</span>
                   </h2>

@@ -14,7 +14,7 @@ const Education = (props: { education: IEducation }) => {
           <DatePeriod startDate={props.education.startDate} endDate={props.education.endDate}></DatePeriod>
         </div>
       </div>
-      <h4 className="p-1 mb-1">
+      <h4 className="p-1">
         {props.education.studyType} {props.education.area}
       </h4>
     </div>
