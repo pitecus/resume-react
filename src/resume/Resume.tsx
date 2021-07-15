@@ -263,8 +263,8 @@ class Resume extends React.Component<
                       <span className="ml-2">Whitin last 7 years</span>
                     </label>
                   </h2>
-                  {filteredExperience.map((work: IWork, index: number, array: IWork[]) => (
-                    <Experience work={work} key={work.startDate} isLast={index + 1 === array.length} />
+                  {filteredExperience.map((work: IWork) => (
+                    <Experience work={work} key={work.startDate} />
                   ))}
                 </div>
               )}

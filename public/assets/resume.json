@@ -155,12 +155,12 @@
       "company": "Google",
       "endDate": "2016-10-01",
       "highlights": [
-        "Architected, design and integrate AngularJS 1.4 components for Cloud SQL inside Google Cloud Platform. Use Google Analytics to improve user experience by evaluating and prioritizing features.",
-        "Coordinate with Google Site Reliability Engineering, project manager and back-end API team to prioritize bugs, features and release using experiments. Provide support for internal and external users. Create utility tools in Bash shell script, NodeJS and Chrome Extensions for internal usage."
+        "Architected, designed, and integrated AngularJS 1.4 components for Cloud SQL inside Google Cloud Platform. Used Google Analytics to improve user experience by evaluating and prioritizing features.",
+        "Coordinated with Google Site Reliability Engineering, project manager, and backend API team to prioritize bugs, features, and releases using feature flags experiments. Built utility tools in Shell script, NodeJS, and Chrome Extensions for internal usage."
       ],
       "position": "Senior Software Engineer",
       "startDate": "2015-05-04",
-      "summary": "Frontend development, API integration, release new features",
+      "summary": "Engineered frontend components, working with API integrations and releases of new features.",
       "website": "https://www.google.com"
     },
     {

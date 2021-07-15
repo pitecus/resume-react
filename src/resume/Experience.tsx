@@ -1,9 +1,9 @@
 import DatePeriod from '../common/DatePeriod';
 import IWork from './work.interface';
 
-const Experience = (props: { work: IWork; isLast: boolean }) => {
+const Experience = (props: { work: IWork }) => {
   return (
-    <div className={`mt-2 ${props.isLast ? '' : 'border-b'}`}>
+    <div className="mt-4 print:mb-2">
       {/* ADP */}
       {props.work.company === 'ADP' && (
         <img width="24" height="24" alt="ADP Logo" className="float-left rounded-full w-6 shadow mr-3" src="assets/logo-adp.jpeg" />
@@ -32,7 +32,7 @@ const Experience = (props: { work: IWork; isLast: boolean }) => {
         </div>
       </div>
       {/* Summary */}
-      <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:mb-2 print:bg-white print:px-0">{props.work.summary}</h4>
+      <h4 className="bg-gray-100 rounded-lg italic p-1 mb-1 print:bg-white print:px-0">{props.work.summary}</h4>
       {/* Highlights */}
       {props.work.highlights.map((highlight: string) => (
         <p className="text-sm print:text-xs" key={highlight}>
