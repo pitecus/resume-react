@@ -190,20 +190,20 @@
       "company": "ADP",
       "endDate": "2011-10-14",
       "highlights": [
-        "Architect and design reusable components using Dojo, Java and Javascript. Develop UI web front ends, middle tier JSF to provide communication, security and performance to Web Services using SOAP. Generate code with cross browser compatibility for Firefox, Internet Explorer (7, 8 and 9) and Safari.",
-        "Provided analysis of new product features, advice about performance improvements and usability with business and analysis teams, review UI under development and create web applications in tight deadlines, with emphasis in high availability, low resources usage, security and performance."
+        "Architected and designed reusable components using Dojo, Java, and Javascript. Developed UI web frontend, middle-tier JSF to provide communication, security, and performance to Web Services using SOAP. Generated code with cross-browser compatibility for Firefox, Internet Explorer (7, 8, and 9), and Safari.",
+        "Created new features, advised about performance improvements and usability with business and analysis teams. Reviewed UI under development and built web applications under tight deadlines, with high availability, low resources usage, security, and performance."
       ],
       "position": "Lead Technical Analyst",
       "startDate": "2008-12-08",
-      "summary": "Full stack development with Java and Javascript. Cross browser compatibility. Performance improvements.",
+      "summary": "Fullstack developer with Java and Javascript. Cross-browser compatibility. Performance improvements.",
       "website": "https://www.adp.com"
     },
     {
       "company": "ADP",
       "endDate": "2008-12-08",
       "highlights": [
-        "Provided 3rd level support to ADP US Portal. The ADP Portal was developed under J2EE and had more than 5 millions of active users with an average of 2 millions of daily hits, providing a common interface to many enterprise products.",
-        "Responsible for administration and monitoring of several production and pre-production servers, troubleshoot and coordinate teams to fix issues efficiently. Provided technical support for other teams regarding WebSphere Portal environment and fixed security issues found during penetration tests."
+        "Provided 3rd level support to ADP Portal in the United States. The ADP Portal was build using Java. It had more than 5 million active users with an average of 2 million daily hits, providing one interface to many enterprise products.",
+        "Was responsible for administration and monitoring of several servers in production and pre-production environments, troubleshoot, and coordinated teams to fix issues efficiently. Helped other co-workers to configure, maintain, and troubleshoot WebSphere Portal environments. Fixed security issues found during penetration tests."
       ],
       "position": "Senior programmer",
       "startDate": "2006-11-01",
@@ -214,11 +214,11 @@
       "company": "ADP",
       "endDate": "2006-11-01",
       "highlights": [
-        "Developed and designed using Scrum methodology a product tailored for US human resources, including payroll, vacations and benefits. The system was based in JSP and Struts, with the front-end running inside WebSphere Portal. Used jUnit tests for reliability, quality and integration tests."
+        "Strived as a software developer for an application to support US human resources, payroll, vacations, and benefits. It uses Java Server Pages and Struts framework, with the frontend running inside WebSphere Portal. Created unit and integration tests."
       ],
       "position": "Programmer",
       "startDate": "2005-04-11",
-      "summary": "Java developer, unit tests.",
+      "summary": "Fullstack developer Java developer.",
       "website": "https://www.adp.com.br"
     }
   ]
